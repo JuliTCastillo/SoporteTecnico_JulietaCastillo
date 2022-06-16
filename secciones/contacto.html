@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- cabeza y conecta con los navegadores -->
+    <!-- Permite los caracteres especiales -->
+    <meta charset="UTF-8">
+    <!-- Hace que nuestro html sea compatible con otros navegadores -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- el html se acopla a los distinto tamaño de dispositivos -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../estilo/style.css">
+    <title>ST - Contacto</title>
+</head>
+
+<body id="grilla">
+    <header>
+        <nav>
+            <div class="home">
+                <a class="logo" href="../index.html">
+                    <img src="../imagen/logo.png" alt="icono PC" width="80px">
+                    <h1>Soporte Técnico</h1>
+                </a>
+            </div>
+            <input type="checkbox" id="tab-nav" class="tab-nav">
+            <label for="tab-nav" class="label">
+                <div class="barritas"></div>
+                <div class="barritas"></div>
+                <div class="barritas"></div>
+            </label>
+            <ul class="listEnlace">
+                <li class="enlace">
+                    <a class="link" href="../index.html">Inicio</a>
+                </li>
+                <li class="enlace">
+                    <a class="link" href="sobreMi.html">Sobre mi</a>
+                </li>
+                <li class="enlace">
+                    <a class="link" href="historia.html">Historia</a>
+                </li>
+                <li class="enlace">
+                    <a class="link" href="servicio.html">Servicio</a>
+                </li>
+                <li class="enlace">
+                    <a class="link" href="contacto.html">Contacto</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="scFormulario">
+            <form action="#">
+                <h2 id="tituloCont">Contacto</h2>
+                <div class="divNombre">
+                    <div class="datosNomApe">
+                        <label for="nombre">Nombre</label>
+                        <input class="datos" type="text" name="nombre" id="nombre" placeholder="Ingrese su nombre">
+                    </div>
+                    <div class="datosNomApe">
+                        <label for="apellido">Apellido</label>
+                        <input class="datos" type="text" name="nombre" id="apellido" placeholder="Ingrese su apellido">
+                    </div>
+                </div>
+                <div class="divMailAsunto">
+                    <label for="mail">Mail</label>
+                    <input class="datos" type="email" name="mail" id="mail" placeholder="Ingrese su mail">
+                    <div class="divAsunto">
+                        <label for="asunto">Asunto del mensaje</label>
+                        <select class="datos" name="asunto" id="asunto">
+                            <option value="">Opinion</option>
+                            <option value="">Reclamo</option>
+                            <option value="">otros</option>
+                        </select>
+                    </div>
+                </div>
+                <textarea class="datos"  name="mensaje" id="mensaje" cols="30" rows="10" placeholder="Ingrese su mensaje"></textarea>
+                <br>
+                <button type="button" id="btnEnviar">Enviar</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <div>
+            <h2>Soporte Tecnico</h2>
+            <ul>
+                <li class="url">
+                    <a href="../index.html">Inicio</a>
+                </li>
+                <li class="url">
+                    <a href="sobreMi.html">Sobre mi</a>
+                </li>
+                <li class="url">
+                    <a href="historia.html">Historia</a>
+                </li>
+                <li class="url">
+                    <a href="servicio.html">Servicios</a>
+                </li>
+                <li class="url">
+                    <a href="contacto.html">Contacto</a>
+                </li>
+            </ul>
+        </div>
+        <div class="divRedesSociales">
+            <h2>Redes sociales</h2>
+            <div class="divIconoRS">
+                <figure>
+                    <img class="iconoRS" src="../imagen/whatsapp.png" alt="logo de redes sociales">
+                </figure>
+                <figure>
+                    <img class="iconoRS" src="../imagen/instagram.png" alt="logo de redes sociales">
+                </figure>
+                <figure>
+                    <img class="iconoRS" src="../imagen/facebook.png" alt="logo de redes sociales">
+                </figure>
+                <figure>
+                    <img class="iconoRS" src="../imagen/linkedin.png" alt="logo de redes sociales">
+                </figure>
+            </div>
+            <h2>Contacto</h2>
+            <div class="divContacto">
+                <p>correo@gmail.com</p>
+                <p>+54 11 xxxx-xxxx</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
