@@ -12,10 +12,36 @@ header {
 
 nav {
     grid-area: navegacion;
+    display: flex;
+    position: relative;
+    animation: animate_text 1s linear infinite alternate;
+}
+nav::before {
+    content: '';
+    position: absolute;
+    width: calc(98% + 2%); /*tamaño de luces derecha e izquierda*/
+    height: calc(98% + 10%); /*tamaño de luces arriba y abajo*/
+    z-index: -1; /*Las luces que colocan atras*/
+    background-image: linear-gradient(60deg, #FF1800, #fffb00, #6CFF00, #0017FF, #FF00FF, #FF0000, #00FFFB, #c300ff);
+    background-size: 300%; 
+    animation: animate_bg 7s infinite; /*Tiempo de animación*/
+}
+@keyframes animate_bg {
+    0%, 100% {
+        background-position: 0%, 20%;
+    }
+    50% {
+        background-position: 100%, 20%;
+    }
+}
+.luces{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    border-bottom: 5px solid orangered;
     align-items: center;
+    position: relative;
+    width: 100%;
+    background: black;
+    color: white;
 }
 
 main {
@@ -112,6 +138,7 @@ h1 {
     .imgPortada {
         width: 100%;
         height: 500px;
+        margin-top: 7px;
         filter: brightness(0.4);
     }
 
@@ -227,7 +254,7 @@ h1 {
     #icMsj1 {
         position: absolute;
         top: 100px;
-        left: 50px;
+        left: 20px;
     }
 
     #icMsj2 {
@@ -245,7 +272,7 @@ h1 {
     #icMsj4 {
         position: absolute;
         top: 100px;
-        right: 50px;
+        right: 20px;
     }
 
     .divOpiniones {
@@ -254,7 +281,6 @@ h1 {
         justify-content: center;
         align-items: center;
         text-align: center;
-        margin: 60px 20% 20px 20%;
     }
 
     .divOpinion {
@@ -262,6 +288,7 @@ h1 {
         padding: 10px;
         border: 5px solid orangered;
         border-radius: 10px;
+        width: 300px;
     }
 
     /*  ESTILO DE SOBREMI*/
