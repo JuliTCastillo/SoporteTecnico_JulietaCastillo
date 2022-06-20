@@ -422,35 +422,32 @@ h1 {
         right: 10%;
         bottom: 5%;
     }
+    .cardCompra{
+        background-color: #000000;
+        border-radius: 20px;
+        border: #141b7c 2px solid;
+    }
+    .imgCompra{
+        width: 100px;
+    }
+    .borde{
+        border-top: #141b7c 2px solid;
+        
+    }
     .divgrillas{
         display: grid;
         grid-template-columns: 250px 250px 250px;
+        grid-gap: 10px;
         justify-content: center;
         align-items: center;
-    }
-    .servicio{ /*justify-content y aling-item : center*/
-        margin: 10px;
-        padding: 10px;
-        border: solid 3px orange;
-        border-radius: 10px;
-    }
-    .btnComprar{
-        padding: 10px;
-        border-radius: 10px;
-        text-align: center;
-        width: 120px;
-        background-color: rgb(226, 153, 17);
     }
     .scPago{
         margin: 10px;
         text-align: center;
     }
-    .divPago{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: wrap;
-    }
+.logoPago{
+    width: 20%;
+}
     /*  ESTILO DE CONTACTO*/
     #tituloCont{
         text-align: center;
