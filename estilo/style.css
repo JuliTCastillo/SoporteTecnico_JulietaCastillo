@@ -22,9 +22,9 @@ nav::before {
     width: calc(98% + 2%); /*tamaño de luces derecha e izquierda*/
     height: calc(98% + 10%); /*tamaño de luces arriba y abajo*/
     z-index: -1; /*Las luces que colocan atras*/
-    background-image: linear-gradient(60deg, #FF1800, #fffb00, #6CFF00, #0017FF, #FF00FF, #FF0000, #00FFFB, #c300ff);
+    background-image: linear-gradient(60deg, #FF1800, #ff4800, #ff8800, #ffd000, #ffe600, #c8ff00, #d0ff00, #b3ff00);
     background-size: 300%; 
-    animation: animate_bg 7s infinite; /*Tiempo de animación*/
+    animation: animate_bg 20s infinite; /*Tiempo de animación*/
 }
 @keyframes animate_bg {
     0%, 100% {
@@ -63,6 +63,7 @@ footer {
 }
 
 a {
+    color: white;
     text-decoration: none;
 }
 
@@ -157,23 +158,36 @@ h1 {
 
     /*¿A qué nos dedicamos?*/
     .divContenido {
+        display: flex;
+        border-radius: 20px;
         margin: 80px 80px 80px 80px;
-        border-radius: 30px;
-        border: 5px solid orangered;
+        background-color: black;
+        display: flex;
         position: relative;
-        /* display: flex; */
-        /*Para animación*/
         /* fondo de colores atras*/
-        /* align-items: center; */
+        align-items: center;
         /*centramos elementos*/
-        /* justify-content: center; */
+        justify-content: center;
     }
-
     .centrarContenido {
-        /* background-color: black; */
-        /*Para animación*/
-        /* border-radius: 20px; */
-        padding: 80px;
+        padding: 70px;
+        position: relative;
+    }
+    .divContenido::before {
+        content: '';
+        position: absolute;
+        border-radius: 20px;
+        width: calc(98% + 3%); /*tamaño de luces derecha e izquierda*/
+        height: calc(98% + 4%); /*tamaño de luces arriba y abajo*/
+        z-index: -1; /*Las luces que colocan atras*/
+        background-image: linear-gradient(60deg, #2600ff, #4e2172, #a224b3, #162470, #2863a7, #16a8b3, #b71ebd, #a31083);
+        background-size: 300%; 
+        animation: animate_bg 15s infinite; /*Tiempo de animación*/
+    }
+    .imgPerfil{
+        border-bottom-right-radius: 20px;
+        border-top-right-radius: 20px;
+        margin-left: 10px;
     }
 
     .textoCentrado {
@@ -217,9 +231,9 @@ h1 {
 
     /*Nuestro Trabajo*/
     .imgCard {
-        width: 300px;
-        height: 300px;
-        filter: brightness(0.6);
+        width: 800px;
+        height: 500px;
+        filter: brightness(0.4);
         border-radius: 10px;
     }
 
@@ -234,14 +248,18 @@ h1 {
         align-items: center;
         margin: 20px;
     }
-
     /*Opiniones*/
     .scOpiniones {
-        /**/
         text-align: center;
         margin-top: 50px;
     }
-
+    .imgCliente{
+        width: 100px;
+        margin: 10px;
+        padding: 10px;
+        border: #9b00af solid 2px;
+        border-radius: 100%;
+    }
     .divOpinionIcono {
         margin: 10px;
         position: relative;
@@ -286,9 +304,12 @@ h1 {
     .divOpinion {
         margin: 25px 25px 25px 25px;
         padding: 10px;
-        border: 5px solid orangered;
-        border-radius: 10px;
         width: 300px;
+        border-radius: 20px;
+        border: solid #9b00af 2px; 
+        box-shadow: 0 5px 36px rgba(161, 0, 161, 0.8)  ; 
+	    -webkit-box-shadow: 0 5px 36px rgba(142, 0, 161, 0.8)  ; 
+	    -moz-box-shadow: 0 5px 36px rgba(83, 0, 161, 0.8)  ; 
     }
 
     /*  ESTILO DE SOBREMI*/
@@ -444,18 +465,21 @@ h1 {
 }
     /*Footer*/
     footer {
-        margin: 10px;
-        border: 5px solid orangered;
-        display: flex;
-        border-radius: 10px;
-        justify-content: space-between;
+        background-color: #111111;
         padding: 20px;
+        text-align: center;
+        margin-top: 20px;
     }
-
+    .divRedesSociales{
+        display: flex;
+        justify-content: space-around;
+    }
     .url {
         padding: 10px;
     }
-
+    .textcontacto{
+        margin: 0px;
+    }
     /*ICONO REDES SOCIALES*/
     .divIconoRS {
         display: flex;
@@ -463,7 +487,6 @@ h1 {
 
     .iconoRS {
         margin: 20px;
-        padding: 0px 10px 0px 10px;
         width: 30px;
     }
 
