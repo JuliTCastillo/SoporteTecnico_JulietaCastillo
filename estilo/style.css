@@ -159,35 +159,36 @@ h1 {
     /*¿A qué nos dedicamos?*/
     .divContenido {
         display: flex;
+        justify-content: center;
+        align-items: center;
         border-radius: 20px;
         margin: 80px 80px 80px 80px;
         background-color: black;
-        display: flex;
         position: relative;
-        /* fondo de colores atras*/
-        align-items: center;
-        /*centramos elementos*/
-        justify-content: center;
     }
     .centrarContenido {
-        padding: 70px;
-        position: relative;
+        display: grid;
+        grid-template-columns: auto auto;
     }
     .divContenido::before {
         content: '';
         position: absolute;
         border-radius: 20px;
         width: calc(98% + 3%); /*tamaño de luces derecha e izquierda*/
-        height: calc(98% + 4%); /*tamaño de luces arriba y abajo*/
+        height: calc(98% + 5%); /*tamaño de luces arriba y abajo*/
         z-index: -1; /*Las luces que colocan atras*/
         background-image: linear-gradient(60deg, #2600ff, #4e2172, #a224b3, #162470, #2863a7, #16a8b3, #b71ebd, #a31083);
         background-size: 300%; 
         animation: animate_bg 15s infinite; /*Tiempo de animación*/
     }
+    .divPresentacion{
+        padding: 70px;
+        position: relative;
+    }
     .imgPerfil{
         border-bottom-right-radius: 20px;
         border-top-right-radius: 20px;
-        margin-left: 10px;
+        width: 100%;
     }
 
     .textoCentrado {
@@ -483,6 +484,7 @@ h1 {
     /*ICONO REDES SOCIALES*/
     .divIconoRS {
         display: flex;
+        justify-content: space-between;
     }
 
     .iconoRS {
@@ -513,6 +515,20 @@ h1 {
     }
 
 @media screen and (max-width: 1200px) {
+    .divContenido::before {
+        width: calc(98% + 6%); /*tamaño de luces derecha e izquierda*/
+    }
+    .centrarContenido {
+        grid-template-columns: auto;
+    }
+    .imgPerfil{
+        border-radius: 20px;
+    }
+    .perfil{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
     .divflex {
         display: flex;
         justify-content: center;
@@ -672,5 +688,22 @@ h1 {
         position: absolute;
         top: 100px;
         right: 20px;
+    }
+    .divPresentacion{
+        padding: 40px;
+    }
+    .iconoLogo{
+        width: 60px;
+    }
+    #icono1, #icono3{
+        left: 0;
+    }
+    #icono2{
+        top: -10px;
+        right: -15px;
+        width: 90px;
+    }
+    #icono4{
+        right: 0px;
     }
 }
