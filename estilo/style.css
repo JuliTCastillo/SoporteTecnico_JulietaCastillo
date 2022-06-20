@@ -315,16 +315,43 @@ h1 {
 
     /*  ESTILO DE SOBREMI*/
     .scSobreMi {
-        margin: 15px 20% 15px 20%;
-        border: solid 5px orangered;
-        border-radius: 15px;
         padding: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
-
-    .divQuienSoy {
+    .divQuienSoy{
+        display: flex;
+        justify-content: center;
         text-align: center;
+        flex-wrap: wrap;
     }
-
+    .imgWork{
+        border-radius: 100%;
+        width: 300px;
+        height: 300px;
+    }
+    .sobreMi{
+        margin: 30px;
+        width: 40%;
+    }
+    .botonesBiografia{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .btnColor{
+        background-color: #ff4400;
+        border: #9c3e1c solid 1px;
+    }
+    .btnColor:hover{
+        background-color: #ff7340;
+        border: #9e411f solid 2px;
+    }
+    .cardFondo{
+        background-color: #222020;
+    }
     /*  ESTILO DE HISTORIA*/
     .scHistoria{
         margin: 20px;

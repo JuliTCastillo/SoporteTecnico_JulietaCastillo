@@ -9,9 +9,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <!-- el html se acopla a los distinto tamaño de dispositivos -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="../estilo/style.css">
     <title>ST - Sobre mi</title>
 </head>
+
 <body id="grilla">
     <header>
         <nav>
@@ -59,36 +62,59 @@
             </div>
         </section>
         <section class="scSobreMi">
-            <div class="divQuienSoy">
-                <figure>
-                    <img src="../imagen/persona.png" alt="Icono de persona">
-                </figure>
-                <h3>¿Quien soy?</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam quo, nihil quibusdam praesentium
-                    illo pariatur magni, expedita omnis similique tempore architecto cum qui nam modi quam obcaecati
-                    impedit, quia sunt?</p>
-            </div>
-            <div>
-                <h3>Educación</h3>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia facilis, illo ipsam quis sed
-                    reiciendis perspiciatis, quos vel voluptate assumenda rem quo id, molestiae saepe. Laudantium enim
-                    exercitationem qui obcaecati.</p>
-            </div>
-            <div>
-                <h3>Lenguajes de Programación</h3>
-                <ul>
-                    <li>Lenguaje 1</li>
-                    <li>Lenguaje 2</li>
-                    <li>Lenguaje 3</li>
-                </ul>
-            </div>
-            <div>
-                <h3>Conocimientos</h3>
-                <ul>
-                    <li>Conocimiento 1</li>
-                    <li>Conocimiento 2</li>
-                    <li>Conocimiento 3</li>
-                </ul>
+            <div class="centradoSM">
+                <div class="divQuienSoy">
+                    <figure>
+                        <img class="imgWork" src="../imagen/working.jpg" alt="Icono de persona">
+                    </figure>
+                    <div class="sobreMi">
+                        <h3>¿Quien soy?</h3>
+                        <p class="biografia">Mi nombre es .... tengo 19 años, en mi tiempo libre juego en linea en donde aprendo a trabajar en equipo y tomar decisiones para llegar a un objetivo en común. Me apaciona lo que es el hardware aun que me dedique aprende lo que es software.</p>
+                    </div>
+                </div>
+                <div class="centrarCol">
+                    <p class="botonesBiografia">
+                        <a class="btn m-2 btnColor" data-toggle="collapse" href="#multiCollapseExample1" role="button"
+                            aria-expanded="false" aria-controls="multiCollapseExample1">Educacción</a>
+                        <button class="btn m-2 btnColor" type="button" data-toggle="collapse"
+                            data-target="#multiCollapseExample2" aria-expanded="false"
+                            aria-controls="multiCollapseExample2">Conocimientos</button>
+                            <button class="btn m-2 btnColor" type="button" data-toggle="collapse"
+                            data-target="#multiCollapseExample3" aria-expanded="false"
+                            aria-controls="multiCollapseExample3">Objetivo</button>
+                        <button class="btn m-2 btnColor" type="button" data-toggle="collapse"
+                            data-target=".multi-collapse" aria-expanded="false"
+                            aria-controls="multiCollapseExample1 multiCollapseExample2 multiCollapseExample3">Mostrar todo</button>
+                    </p>
+                    <div class="col">
+                        <div class="col m-1">
+                            <div class="collapse multi-collapse" id="multiCollapseExample1">
+                                <div class="card card-body cardFondo">
+                                    <p>Soy Egresado de una escuela técnica en computación. <br>
+                                    Fuera de mi ambito educativo, realizo un curso para capacitarme como <b>FullStack con java</b></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col m-1">
+                            <div class="collapse multi-collapse" id="multiCollapseExample2">
+                                <div class="card card-body cardFondo">
+                                    <p><b>Armado de Pc</b> y un poco de <b>optimizacion en dispositvo</b>. <br>
+                                    Conocimiento <b>Básico en programación</b>. <br>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col m-1">
+                            <div class="collapse multi-collapse" id="multiCollapseExample3">
+                                <div class="card card-body cardFondo">
+                                    <p>Soy una persona responsable con ganas de aprender y expandir mis conocimientos. <br>
+                                    Me gusta trabajar en equipo e individualmente, me acoplo a cualquier ambiente laboral.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </section>
     </main>
@@ -99,19 +125,19 @@
                 <h5>Redes sociales</h5>
                 <div class="divIconoRS">
                     <figure>
-                    <img class="iconoRS" src="../imagen/whatsapp.png" alt="logo de redes sociales">
-                </figure>
-                <figure>
-                    <img class="iconoRS" src="../imagen/instagram.png" alt="logo de redes sociales">
-                </figure>
-                <figure>
-                    <img class="iconoRS" src="../imagen/facebook.png" alt="logo de redes sociales">
-                </figure>
-                <figure>
-                    <img class="iconoRS" src="../imagen/linkedin.png" alt="logo de redes sociales">
-                </figure>
+                        <img class="iconoRS" src="../imagen/whatsapp.png" alt="logo de redes sociales">
+                    </figure>
+                    <figure>
+                        <img class="iconoRS" src="../imagen/instagram.png" alt="logo de redes sociales">
+                    </figure>
+                    <figure>
+                        <img class="iconoRS" src="../imagen/facebook.png" alt="logo de redes sociales">
+                    </figure>
+                    <figure>
+                        <img class="iconoRS" src="../imagen/linkedin.png" alt="logo de redes sociales">
+                    </figure>
                 </div>
-                
+
             </div>
             <div class="divContacto">
                 <h5>Contacto</h5>
@@ -119,6 +145,15 @@
             </div>
         </div>
     </footer>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+    </script>
 </body>
 
 </html>
