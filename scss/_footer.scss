@@ -1,0 +1,25 @@
+footer{
+    grid-area: footer;
+    background-color: #111111;
+    padding: 20px;
+    text-align: center;
+    margin-top: 20px;
+    .divRedesSociales{
+        display: flex;
+        justify-content: space-around;
+        .divIconoRS{
+            display: flex;
+            justify-content: space-between;
+            .iconoRS{
+                margin: 20px;
+                width: 30px;
+            }
+        }
+    }
+    .divContacto{
+        margin-left: 30px;
+        .textcontacto{
+            margin: 0;
+        }
+    }
+}

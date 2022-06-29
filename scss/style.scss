@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import "encabezado";
+@import "animacion";
+@import "footer"; 
+
+
+*{
+    padding: 0;
+    margin: 0;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#grilla{
+    background-color: black;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-areas: 
+        "encabezado"
+        "contenido"
+        "footer";
+    main{
+        grid-area: contenido;
+        .portada{
+            position: relative;
+            .imgPortada{
+                width: 100%;
+                height: 500px;
+                margin-top: 7px;
+                filter: brightness(0.4);
+            }
+            .textAbsolute{
+                position: absolute;
+                bottom: 20px;
+                width: 150px;
+                padding: 10px;
+                text-align: center;
+                background-color: rgba(110, 110, 110, 0.425);
+            }
+        }
+        .divContenido{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 20px;
+            margin: 80px;
+            background-color: black;
+            position: relative;
+            .centrarContenido{
+                display: grid;
+                grid-template-columns: auto auto;
+                justify-items: center;
+                align-items: center;
+                &::before{
+                    content: '';
+                    position: absolute;
+                    border-radius: 20px;
+                    width: calc(98% + 3%); /*tamaño de luces derecha e izquierda*/
+                    height: calc(98% + 5%); /*tamaño de luces arriba y abajo*/
+                    z-index: -1; /*Las luces que colocan atras*/
+                    background-image: linear-gradient(60deg, #2600ff, #4e2172, #a224b3, #162470, #2863a7, #16a8b3, #b71ebd, #a31083);
+                    background-size: 300%; 
+                    animation: animate_bg 15s infinite; /*Tiempo de animación*/
+                }
+                .divPresentacion{
+                    padding: 60px;
+                    position: relative;
+                }
+                #icono1 {
+                    width: 80px;
+                    position: absolute;
+                    top: 10px;
+                    left: 20px;
+                }
+                #icono2 {
+                    position: absolute;
+                    width: 110px;
+                    top: 0px;
+                    right: 10px;
+                }
+                #icono3 {
+                    width: 80px;
+                    position: absolute;
+                    bottom: 10px;
+                    left: 20px;
+                }
+                #icono4 {
+                    width: 80px;
+                    position: absolute;
+                    bottom: 10px;
+                    right: 20px;
+                }
+                .textoCentrado{
+                    text-align: center;
+                    h3{
+                        margin: 30px 0px;
+                    }
+                    p{
+                        margin: 30px 0px;
+                    }
+                }
+            }
+            .imgPerfil{
+                border-bottom-right-radius: 20px;
+                border-top-right-radius: 20px;
+                width: 100%;
+            }
+        }
+        .scNuestroTrabajo{
+            text-align: center;
+            margin: 20px;
+            .carousel{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 20px;
+                .imgCard{
+                    width: 100%;
+                    height: 500px;
+                    filter: brightness(0.4);
+                    border-radius: 10px;
+                }
+            }
+        }
+        .scOpiniones{
+            text-align: center;
+            margin-top: 50px;
+            .divOpinionIcono{
+                margin: 10px;
+                position: relative;
+                #icMsj1 {
+                    width: 80px;
+                    position: absolute;
+                    top: 100px;
+                    left: 20px;
+                }
+                #icMsj2 {
+                    width: 80px;
+                    position: absolute;
+                    top: -30px;
+                    left: 30%;
+                }
+                #icMsj3 {
+                    width: 80px;
+                    position: absolute;
+                    top: -30px;
+                    right: 30%;
+                }
+                #icMsj4 {
+                    width: 80px;
+                    position: absolute;
+                    top: 100px;
+                    right: 20px;
+                }
+                #tildeOP{
+                    padding-top: 30px;
+                }
+                .divOpiniones{
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    align-items: center;
+                    text-align: center;
+                    .divOpinion{
+                        margin: 25px 25px 25px 25px;
+                        padding: 10px;
+                        width: 300px;
+                        border-radius: 20px;
+                        border: solid #9b00af 2px; 
+                        box-shadow: 0 5px 36px rgba(161, 0, 161, 0.8)  ; 
+                        -webkit-box-shadow: 0 5px 36px rgba(142, 0, 161, 0.8)  ; 
+                        -moz-box-shadow: 0 5px 36px rgba(83, 0, 161, 0.8)  ; 
+                        .imgCliente{
+                            width: 100px;
+                            margin: 10px;
+                            padding: 10px;
+                            border: #9b00af solid 2px;
+                            border-radius: 100%;
+                        }
+                        &:hover{
+                            transform: scale(1.12,1.12);
+                            transition-timing-function: ease-out;
+                            transition-duration: 100ms;
+                            -moz-transform: scale(1.12, 1.12);
+                            -moz-transition-timing-function: ease-out;
+                            -moz-transition-duration: 100ms;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

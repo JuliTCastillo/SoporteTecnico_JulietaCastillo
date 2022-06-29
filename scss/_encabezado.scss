@@ -1,0 +1,119 @@
+header{
+    grid-area: "encabezado";
+    nav{
+        display: flex;
+        position: relative;
+        animation: animate_text 1s linear infinite alternate;
+        &::before{
+            content: '';
+            position: absolute;
+            width: calc(98% + 2%); /*tamaño de luces der e izq*/
+            height: calc(98% + 10%); /*tamaño de luces arriba y abajo*/
+            z-index: -1; /*se coloca atras*/
+            background-image: linear-gradient(60deg, #FF1800, #ff4800, #ff8800, #ffd000, #ffe600, #c8ff00, #d0ff00, #b3ff00);
+            background-size: 300%;
+            animation: animate_bg 20s infinite; /*Tiempo de la animacion*/
+        }
+        .luces{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            position: relative;
+            width: 100%;
+            background: black;
+            color: white;
+            
+            
+                .logo{
+                    color: white;
+                    display: flex;
+                    align-items: center;
+                    padding: 10px;
+                    h1{
+                        font-size: 30px;
+                        width: 250px;
+                        margin: 5px 20px 0px 0px;
+                        font-family: 'Bebas Neue', cursive;
+                        margin-left: 10px;
+                    }
+                }
+            
+            .tab-nav{
+                outline: none;
+                display: none;
+            }
+            .label{
+                display: none;
+                .barritas{
+                    width: 35px;
+                    height: 5px;
+                    background-color: white;
+                    margin-top: 5px;
+                }
+                
+            }
+            .listEnlace{
+                grid-column: 3;
+                list-style: none;
+                margin-right: 20px;
+                padding: 0;
+                .enlace{
+                    display: inline-block;
+                    padding: 10px;
+                    .link{
+                        text-decoration: none;
+                        color: white;
+                        position: relative;
+                        &::after{
+                            content: '';
+                            display: block;
+                            height: 2px;
+                            background-color: white;
+                            position: absolute;
+                            transform-origin: right;
+                            transform: scale(0,1);
+                            transition: transform ease-in-out 0.5s;
+                        }
+                        &:hover::after{
+                            transform: scale(1,1);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 800px) {
+    header nav .luces .label {
+        display: block;
+        cursor: pointer;
+        grid-column: 3;
+        padding-right: 10px;
+    }
+    header nav .luces .listEnlace{
+        grid-column: 1;
+    }
+
+    .listEnlace {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-column: 1;
+        /*lo acomodamos en la primera columna*/
+        max-height: 0;
+        /*le sacamos toda la altura*/
+        max-height: 0;
+        overflow: hidden;
+        /*que la trasición sea de un 1s */
+        transition: all ease-in-out 0.6s;
+    }
+
+    nav input:checked~.listEnlace {
+        /*Espacio que tiene el menu cuando se abre*/
+        max-height: 500px;
+    }
+
+    .listEnlace .enlace .link {
+        /*espacio en cada enlace*/
+        margin: 10px 0px 0px 10px;
+    }
+}

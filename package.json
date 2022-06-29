@@ -1,0 +1,25 @@
+{
+  "name": "miproyecto",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-css": "node-sass --include-path scss scss/style.scss estilo/style.css",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JuliTCastillo/SoporteTecnico_JulietaCastillo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JuliTCastillo/SoporteTecnico_JulietaCastillo/issues"
+  },
+  "homepage": "https://github.com/JuliTCastillo/SoporteTecnico_JulietaCastillo#readme",
+  "devDependencies": {
+    "node-sass": "^7.0.1",
+    "nodemon": "^2.0.18"
+  }
+}
