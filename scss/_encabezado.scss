@@ -41,6 +41,12 @@ header{
             .tab-nav{
                 outline: none;
                 display: none;
+                @media screen and (max-width: 800px) {
+                    &:checked~.listEnlace {
+                        /*Espacio que tiene el menu cuando se abre*/
+                        max-height: 500px;
+                    }
+                }
             }
             .label{
                 display: none;
@@ -50,7 +56,12 @@ header{
                     background-color: white;
                     margin-top: 5px;
                 }
-                
+                @media screen and (max-width: 800px) {
+                    display: block;
+                    cursor: pointer;
+                    grid-column: 3;
+                    padding-right: 10px;            
+                }
             }
             .listEnlace{
                 grid-column: 3;
@@ -77,43 +88,24 @@ header{
                         &:hover::after{
                             transform: scale(1,1);
                         }
+                        @media screen and (max-width: 800px){
+                            margin: 10px 0px 0px 10px;
+                        }
                     }
+                }
+                @media screen and (max-width: 800px){
+                    display: grid;
+                    grid-template-columns: 1fr;
+                    grid-column: 1;
+                    /*lo acomodamos en la primera columna*/
+                    max-height: 0;
+                    /*le sacamos toda la altura*/
+                    max-height: 0;
+                    overflow: hidden;
+                    /*que la trasición sea de un 1s */
+                    transition: all ease-in-out 0.6s;
                 }
             }
         }
-    }
-}
-@media screen and (max-width: 800px) {
-    header nav .luces .label {
-        display: block;
-        cursor: pointer;
-        grid-column: 3;
-        padding-right: 10px;
-    }
-    header nav .luces .listEnlace{
-        grid-column: 1;
-    }
-
-    .listEnlace {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-column: 1;
-        /*lo acomodamos en la primera columna*/
-        max-height: 0;
-        /*le sacamos toda la altura*/
-        max-height: 0;
-        overflow: hidden;
-        /*que la trasición sea de un 1s */
-        transition: all ease-in-out 0.6s;
-    }
-
-    nav input:checked~.listEnlace {
-        /*Espacio que tiene el menu cuando se abre*/
-        max-height: 500px;
-    }
-
-    .listEnlace .enlace .link {
-        /*espacio en cada enlace*/
-        margin: 10px 0px 0px 10px;
     }
 }
