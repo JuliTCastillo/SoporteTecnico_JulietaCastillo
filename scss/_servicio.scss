@@ -1,17 +1,39 @@
 /*Servicio*/
-.scContrata{
-    position:relative;
-    text-align: center;
-    margin: 20px;
-    padding: 20px;
-    
-    #icCarrito1{
-        position: absolute;
-        width: 80px;
+@mixin mediaquery2_5($id) {
+    @if  $id == 2 {
+        left: 5%;
+        top: 45%;
+    }
+    @else if $id == 5{
+        right: 5%;
+        top: 45%;
+    }
+    @media screen and (max-width: 800px) {
+        @if $id == 2{
+            left: 10%;
+        }
+        @else if $id == 5 {
+            right: 0%;
+            bottom:30px;
+        }
+    }
+    @media screen and (max-width: 1200px){
+        @if $id == 2{
+            left: -20px;
+            width: 60px;
+        }
+        @else if $id == 5 {
+            right: -20px;
+            width: 60px;
+        }
+    }
+}
+@mixin mediaquery1346($id) {
+    @if $id == 1 {
         left: 10%;
         top:20px;
         @media screen and (max-width: 800px) {
-            top:10%;
+            top: 10%;
         }
         @media screen and (max-width: 1200px){
             left: 40px;
@@ -20,23 +42,9 @@
         @media screen and (max-width: 500px) {
             left:-10px;
         }
+
     }
-    #icCarrito2{
-        position: absolute;
-        width: 80px;
-        left: 5%;
-        top: 45%;
-        @media screen and (max-width: 800px) {
-            left: 10%;
-        }
-        @media screen and (max-width: 1200px){
-            left: -20px;
-            width: 60px;
-        }
-    }
-    #icCarrito3{
-        position: absolute;
-        width: 80px;
+    @else if $id == 3{
         left: 10%;
         bottom: 5%;
         @media screen and (max-width: 800px) {
@@ -52,9 +60,7 @@
             width: 60px;
         }
     }
-    #icCarrito4{
-        position: absolute;
-        width: 80px;
+    @else if $id == 4{
         right: 10%;
         top:20px;
         @media screen and (max-width: 800px) {
@@ -69,23 +75,7 @@
             right: 0px;
         }
     }
-    #icCarrito5{
-        position: absolute;
-        width: 80px;
-        right: 5%;
-        top: 45%;
-        @media screen and (max-width: 800px) {
-            right: 0%;
-            bottom:30px;
-        }
-        @media screen and (max-width: 1200px){
-            right: -20px;
-            width: 60px;
-        }
-    }
-    #icCarrito6{
-        position: absolute;
-        width: 80px;
+    @else if $id == 6{
         right: 10%;
         bottom: 5%;
         @media screen and (max-width: 1030px){
@@ -99,6 +89,25 @@
         @media screen and (max-width: 800px) {
             right: 0px;
             bottom:30px;
+        }
+
+    }
+}
+.scContrata{
+    position:relative;
+    text-align: center;
+    margin: 20px;
+    padding: 20px;
+    @for $i from 1 to 7 {
+        #icCarrito#{$i}{
+            position: absolute;
+            width: 80px;
+            @if $i == 2 or $i == 5{
+                @include mediaquery2_5($i);
+            }
+            @else{
+                @include mediaquery1346($i);
+            }
         }
     }
     .divgrillas{
