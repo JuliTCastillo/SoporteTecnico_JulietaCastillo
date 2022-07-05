@@ -103,6 +103,252 @@ header {
   50% {
     background-position: 100%, 20%; } }
 
+/*Sobre mi*/
+.scSobreMi {
+  padding: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .scSobreMi .divQuienSoy {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    flex-wrap: wrap; }
+    .scSobreMi .divQuienSoy .imgWork {
+      border-radius: 100%;
+      width: 300px;
+      height: 300px; }
+    .scSobreMi .divQuienSoy .sobreMi {
+      margin: 30px;
+      width: 40%; }
+      @media screen and (max-width: 600px) {
+        .scSobreMi .divQuienSoy .sobreMi {
+          width: 100%; } }
+  .scSobreMi .botonesBiografia {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; }
+    .scSobreMi .botonesBiografia .btnColor {
+      color: white;
+      background-color: #ff4400;
+      border: #9c3e1c solid 1px; }
+      .scSobreMi .botonesBiografia .btnColor:hover {
+        background-color: #ff7340;
+        border: #9e411f solid 2px; }
+  .scSobreMi .cardFondo {
+    background-color: #222020; }
+
+/*Historia*/
+.scHistoria {
+  margin: 20px;
+  border: solid 5px orangered;
+  border-radius: 10px; }
+  .scHistoria .divflex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap-reverse;
+    /*Despues divVideoImg ponerles display flex*/ }
+    .scHistoria .divflex .divVideoImg {
+      margin: 10px;
+      position: relative; }
+      .scHistoria .divflex .divVideoImg video {
+        border-radius: 10px; }
+        @media screen and (max-width: 1250px) {
+          .scHistoria .divflex .divVideoImg video {
+            position: relative;
+            padding: 20px;
+            border-radius: 30px; } }
+      .scHistoria .divflex .divVideoImg .videoAbs {
+        border-radius: 10px;
+        position: absolute;
+        top: 30%; }
+        @media screen and (max-width: 1250px) {
+          .scHistoria .divflex .divVideoImg .videoAbs {
+            position: relative;
+            padding: 20px;
+            border-radius: 30px; } }
+      .scHistoria .divflex .divVideoImg .imgTrabajoTeam {
+        margin-top: 10%;
+        border-radius: 10px; }
+        @media screen and (max-width: 1250px) {
+          .scHistoria .divflex .divVideoImg .imgTrabajoTeam {
+            margin-top: 20px; } }
+      @media screen and (max-width: 1250px) {
+        .scHistoria .divflex .divVideoImg {
+          display: flex;
+          justify-content: space-around;
+          flex-wrap: wrap; } }
+    .scHistoria .divflex .divComoComence {
+      margin: 0px 10% 0px 0px;
+      width: 500px;
+      text-align: center; }
+      @media screen and (max-width: 1250px) {
+        .scHistoria .divflex .divComoComence {
+          margin: 40px 30px 0px 30px; } }
+    @media screen and (max-width: 1250px) {
+      .scHistoria .divflex {
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap-reverse; } }
+
+/*Servicio*/
+.scContrata {
+  position: relative;
+  text-align: center;
+  margin: 20px;
+  padding: 20px; }
+  .scContrata #icCarrito1 {
+    position: absolute;
+    width: 80px;
+    left: 10%;
+    top: 20px; }
+    @media screen and (max-width: 800px) {
+      .scContrata #icCarrito1 {
+        top: 10%; } }
+    @media screen and (max-width: 1200px) {
+      .scContrata #icCarrito1 {
+        left: 40px;
+        width: 60px; } }
+    @media screen and (max-width: 500px) {
+      .scContrata #icCarrito1 {
+        left: -10px; } }
+  .scContrata #icCarrito2 {
+    position: absolute;
+    width: 80px;
+    left: 5%;
+    top: 45%; }
+    @media screen and (max-width: 800px) {
+      .scContrata #icCarrito2 {
+        left: 10%; } }
+    @media screen and (max-width: 1200px) {
+      .scContrata #icCarrito2 {
+        left: -20px;
+        width: 60px; } }
+  .scContrata #icCarrito3 {
+    position: absolute;
+    width: 80px;
+    left: 10%;
+    bottom: 5%; }
+    @media screen and (max-width: 800px) {
+      .scContrata #icCarrito3 {
+        left: 0%;
+        bottom: 30px; } }
+    @media screen and (max-width: 1200px) {
+      .scContrata #icCarrito3 {
+        left: 40px;
+        width: 60px; } }
+    @media screen and (max-width: 1030px) {
+      .scContrata #icCarrito3 {
+        left: 0px;
+        width: 60px; } }
+  .scContrata #icCarrito4 {
+    position: absolute;
+    width: 80px;
+    right: 10%;
+    top: 20px; }
+    @media screen and (max-width: 800px) {
+      .scContrata #icCarrito4 {
+        right: 0%;
+        top: 10%; } }
+    @media screen and (max-width: 1200px) {
+      .scContrata #icCarrito4 {
+        right: 40px;
+        width: 60px; } }
+    @media screen and (max-width: 500px) {
+      .scContrata #icCarrito4 {
+        right: 0px; } }
+  .scContrata #icCarrito5 {
+    position: absolute;
+    width: 80px;
+    right: 5%;
+    top: 45%; }
+    @media screen and (max-width: 800px) {
+      .scContrata #icCarrito5 {
+        right: 0%;
+        bottom: 30px; } }
+    @media screen and (max-width: 1200px) {
+      .scContrata #icCarrito5 {
+        right: -20px;
+        width: 60px; } }
+  .scContrata #icCarrito6 {
+    position: absolute;
+    width: 80px;
+    right: 10%;
+    bottom: 5%; }
+    @media screen and (max-width: 1030px) {
+      .scContrata #icCarrito6 {
+        right: 0px;
+        width: 60px; } }
+    @media screen and (max-width: 1200px) {
+      .scContrata #icCarrito6 {
+        right: 40px;
+        width: 60px; } }
+    @media screen and (max-width: 800px) {
+      .scContrata #icCarrito6 {
+        right: 0px;
+        bottom: 30px; } }
+  .scContrata .divgrillas {
+    display: grid;
+    grid-template-columns: 250px 250px 250px;
+    grid-gap: 10px;
+    justify-content: center;
+    align-items: center; }
+    .scContrata .divgrillas .cardCompra {
+      background-color: #000000;
+      border-radius: 20px;
+      border: #141b7c 2px solid; }
+      .scContrata .divgrillas .cardCompra .imgCompra {
+        width: 100px; }
+      .scContrata .divgrillas .cardCompra .borde {
+        border-top: #141b7c 2px solid; }
+    @media screen and (max-width: 930px) {
+      .scContrata .divgrillas {
+        grid-template-columns: 250px;
+        justify-content: center;
+        align-items: center; } }
+
+.scPago {
+  margin: 10px;
+  text-align: center; }
+  .scPago .logoPago {
+    width: 30%; }
+    @media screen and (max-width: 1200px) {
+      .scPago .logoPago {
+        width: 600px; } }
+    @media screen and (max-width: 800px) {
+      .scPago .logoPago {
+        width: 400px; } }
+    @media screen and (max-width: 500px) {
+      .scPago .logoPago {
+        width: 300px; } }
+
+.scFormulario {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .scFormulario form {
+    width: 50%; }
+    .scFormulario form .tituloCentrado {
+      text-align: center; }
+    .scFormulario form .spanColor {
+      background-color: #5f5d5b;
+      border: #383838 1px solid;
+      color: black; }
+    .scFormulario form .inpColor {
+      background-color: #f1e9bd;
+      border: #42413f 1px solid;
+      color: #1a1a1a; }
+    .scFormulario form #btnEnviar {
+      background-color: #6d6d68;
+      border: #302f2c 1px solid;
+      color: black; }
+      .scFormulario form #btnEnviar:hover {
+        background-color: #aaaaa4; }
+
 footer {
   grid-area: footer;
   background-color: #111111;
@@ -118,10 +364,18 @@ footer {
       footer .divRedesSociales .divIconoRS .iconoRS {
         margin: 20px;
         width: 30px; }
-  footer .divContacto {
-    margin-left: 30px; }
-    footer .divContacto .textcontacto {
-      margin: 0; }
+      @media screen and (max-width: 500px) {
+        footer .divRedesSociales .divIconoRS {
+          justify-content: center;
+          align-items: center; } }
+    footer .divRedesSociales .divContacto {
+      margin-left: 30px; }
+      @media screen and (max-width: 500px) {
+        footer .divRedesSociales .divContacto {
+          margin: 0; } }
+    @media screen and (max-width: 500px) {
+      footer .divRedesSociales {
+        display: block; } }
 
 * {
   padding: 0;
@@ -219,6 +473,9 @@ footer {
         @media screen and (max-width: 1200px) {
           #grilla main .divContenido .imgPerfil {
             border-radius: 20px; } }
+      @media screen and (max-width: 500px) {
+        #grilla main .divContenido {
+          margin: 20px; } }
     #grilla main .scNuestroTrabajo {
       text-align: center;
       margin: 20px; }
@@ -253,7 +510,8 @@ footer {
           @media screen and (max-width: 680px) {
             #grilla main .scOpiniones .divOpinionIcono #icMsj1 {
               top: 20%;
-              left: 0%; } }
+              left: 0%;
+              left: -3%; } }
         #grilla main .scOpiniones .divOpinionIcono #icMsj2 {
           width: 80px;
           position: absolute;
@@ -285,7 +543,8 @@ footer {
           @media screen and (max-width: 680px) {
             #grilla main .scOpiniones .divOpinionIcono #icMsj4 {
               top: 20%;
-              right: 0%; } }
+              right: 0%;
+              right: -3%; } }
         #grilla main .scOpiniones .divOpinionIcono #tildeOP {
           padding-top: 30px; }
         #grilla main .scOpiniones .divOpinionIcono .divOpiniones {

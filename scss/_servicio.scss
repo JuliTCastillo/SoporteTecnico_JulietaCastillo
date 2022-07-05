@@ -1,0 +1,146 @@
+/*Servicio*/
+.scContrata{
+    position:relative;
+    text-align: center;
+    margin: 20px;
+    padding: 20px;
+    
+    #icCarrito1{
+        position: absolute;
+        width: 80px;
+        left: 10%;
+        top:20px;
+        @media screen and (max-width: 800px) {
+            top:10%;
+        }
+        @media screen and (max-width: 1200px){
+            left: 40px;
+            width: 60px;
+        }
+        @media screen and (max-width: 500px) {
+            left:-10px;
+        }
+    }
+    #icCarrito2{
+        position: absolute;
+        width: 80px;
+        left: 5%;
+        top: 45%;
+        @media screen and (max-width: 800px) {
+            left: 10%;
+        }
+        @media screen and (max-width: 1200px){
+            left: -20px;
+            width: 60px;
+        }
+    }
+    #icCarrito3{
+        position: absolute;
+        width: 80px;
+        left: 10%;
+        bottom: 5%;
+        @media screen and (max-width: 800px) {
+            left: 0%;
+            bottom:30px;
+        }
+        @media screen and (max-width: 1200px){
+            left: 40px;
+            width: 60px;
+        }
+        @media screen and (max-width: 1030px){
+            left: 0px;
+            width: 60px;
+        }
+    }
+    #icCarrito4{
+        position: absolute;
+        width: 80px;
+        right: 10%;
+        top:20px;
+        @media screen and (max-width: 800px) {
+            right: 0%;
+            top:10%;
+        }
+        @media screen and (max-width: 1200px){
+            right: 40px;
+            width: 60px;
+        }
+        @media screen and (max-width: 500px){
+            right: 0px;
+        }
+    }
+    #icCarrito5{
+        position: absolute;
+        width: 80px;
+        right: 5%;
+        top: 45%;
+        @media screen and (max-width: 800px) {
+            right: 0%;
+            bottom:30px;
+        }
+        @media screen and (max-width: 1200px){
+            right: -20px;
+            width: 60px;
+        }
+    }
+    #icCarrito6{
+        position: absolute;
+        width: 80px;
+        right: 10%;
+        bottom: 5%;
+        @media screen and (max-width: 1030px){
+            right: 0px;
+            width: 60px;
+        }
+        @media screen and (max-width: 1200px){
+            right: 40px;
+            width: 60px;
+        }
+        @media screen and (max-width: 800px) {
+            right: 0px;
+            bottom:30px;
+        }
+    }
+    .divgrillas{
+        display: grid;
+        grid-template-columns: 250px 250px 250px;
+        grid-gap: 10px;
+        justify-content: center;
+        align-items: center;
+        .cardCompra{
+            background-color: #000000;
+            border-radius: 20px;
+            border: #141b7c 2px solid;
+            .imgCompra{
+                width: 100px;
+            }
+            .borde{
+                border-top: #141b7c 2px solid;
+                
+            }
+        }
+        @media screen and (max-width: 930px){
+            grid-template-columns: 250px;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+}
+.scPago{
+    margin: 10px;
+    text-align: center;
+    .logoPago{
+        width: 30%;
+        @media screen and (max-width: 1200px){
+            width: 600px;
+        }
+        @media screen and (max-width: 800px){
+            width: 400px;
+        }
+        @media screen and (max-width: 500px){
+            width: 300px;
+        }
+    }
+    
+}

@@ -1,0 +1,44 @@
+/*Sobre mi*/
+.scSobreMi{
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .divQuienSoy{
+        display:flex;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        flex-wrap: wrap;
+        .imgWork{
+            border-radius: 100%;
+            width: 300px;
+            height: 300px;
+        }
+        .sobreMi{
+            margin: 30px;
+            width: 40%;
+            @media screen and (max-width: 600px){
+                width: 100%;
+            }
+        }
+    }
+    .botonesBiografia{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        .btnColor{
+            color: white;
+            background-color: #ff4400;
+            border: #9c3e1c solid 1px;
+            &:hover{
+                background-color: #ff7340;
+            border: #9e411f solid 2px;
+            }
+        }
+    }
+    .cardFondo{
+        background-color: #222020;
+    }
+}

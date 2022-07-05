@@ -1,0 +1,31 @@
+.scFormulario{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    form{
+        width: 50%;
+        .tituloCentrado{
+            text-align: center;
+        }
+        .spanColor{
+            background-color: #5f5d5b;
+            border: rgb(56, 56, 56) 1px solid;
+            color:black;
+        }
+        .inpColor{
+            background-color: rgb(241, 233, 189);
+            border: #42413f 1px solid;
+            color:rgb(26, 26, 26);
+        }
+        #btnEnviar{
+            background-color: #6d6d68;
+            border: rgb(48, 47, 44) 1px solid;
+            color:black;
+            &:hover{
+                background-color: #aaaaa4;
+            }
+        }
+    }
+    
+}

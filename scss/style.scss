@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 @import "encabezado";
 @import "animacion";
+@import "sobreMi";
+@import "historia";
+@import "servicio";
+@import "formulario";
 @import "footer"; 
 
 
@@ -114,6 +118,9 @@
                     border-radius: 20px;
                 }
             }
+            @media screen and (max-width: 500px){
+                margin: 20px;
+            }
         }
         .scNuestroTrabajo{
             text-align: center;
@@ -152,6 +159,9 @@
                     @media screen and(max-width: 680px){
                         top: 20%;
                         left: 0%;
+                        @if(max-width: 500px){
+                            left: -3%;
+                        }
                     }
                 }
                 #icMsj2 {
@@ -187,6 +197,9 @@
                     @media screen and(max-width: 680px){
                         top: 20%;
                         right: 0%;
+                        @if(max-width: 500px){
+                            right: -3%;
+                        }
                     }
                 }
                 #tildeOP{

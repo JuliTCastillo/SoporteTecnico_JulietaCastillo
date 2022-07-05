@@ -14,12 +14,19 @@ footer{
                 margin: 20px;
                 width: 30px;
             }
+            @media screen and (max-width: 500px){
+                justify-content: center;
+                align-items: center;
+            }
         }
-    }
-    .divContacto{
-        margin-left: 30px;
-        .textcontacto{
-            margin: 0;
+        .divContacto{
+            margin-left: 30px;
+            @media screen and (max-width: 500px){
+                margin: 0;
+            }
+        }
+        @media screen and (max-width: 500px){
+            display: block;
         }
     }
 }

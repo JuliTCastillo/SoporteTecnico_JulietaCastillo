@@ -1,0 +1,62 @@
+/*Historia*/
+.scHistoria{
+    margin:20px;
+    border: solid 5px orangered;
+    border-radius: 10px;
+    .divflex{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap-reverse;
+        .divVideoImg{
+            margin: 10px;
+            position: relative;
+            video{
+                border-radius: 10px;
+                @media  screen and (max-width: 1250px){
+                    position: relative;
+                    padding: 20px;
+                    border-radius: 30px;
+                } 
+            }
+            .videoAbs{
+                border-radius: 10px;
+                position: absolute;
+                top: 30%;
+                @media  screen and (max-width: 1250px){
+                    position: relative;
+                    padding: 20px;
+                    border-radius: 30px;
+                } 
+            }
+            .imgTrabajoTeam{
+                margin-top: 10%;
+                border-radius: 10px;
+                @media  screen and (max-width: 1250px){
+                    margin-top: 20px;
+                } 
+            }
+            @media screen and (max-width: 1250px){
+                display: flex;
+                justify-content: space-around;
+                flex-wrap: wrap;
+            }
+        }
+        /*Despues divVideoImg ponerles display flex*/
+        .divComoComence{ 
+            margin: 0px 10% 0px 0px;
+            width: 500px;
+            text-align: center;
+            @media screen and (max-width: 1250px){
+                
+                    margin: 40px 30px 0px 30px;
+                
+            }
+        }
+        @media screen and (max-width: 1250px){
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap-reverse;
+        }
+    }
+}
