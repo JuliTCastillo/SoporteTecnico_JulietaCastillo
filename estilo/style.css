@@ -35,7 +35,6 @@ header {
         text-decoration: none; }
         header nav .luces .logo h1 {
           font-size: 30px;
-          width: 250px;
           margin: 5px 20px 0px 0px;
           font-family: 'Bebas Neue', cursive;
           margin-left: 10px; }
@@ -331,6 +330,12 @@ header {
       color: black; }
       .scFormulario form #btnEnviar:hover {
         background-color: #aaaaa4; }
+    @media screen and (width: 900px) {
+      .scFormulario form {
+        width: 80%; } }
+    @media screen and (width: 900px) {
+      .scFormulario form {
+        width: 95%; } }
 
 footer {
   grid-area: footer;
