@@ -330,10 +330,10 @@ header {
       color: black; }
       .scFormulario form #btnEnviar:hover {
         background-color: #aaaaa4; }
-    @media screen and (width: 900px) {
+    @media screen and (max-width: 900px) {
       .scFormulario form {
         width: 80%; } }
-    @media screen and (width: 500px) {
+    @media screen and (max-width: 500px) {
       .scFormulario form {
         width: 95%; } }
 
