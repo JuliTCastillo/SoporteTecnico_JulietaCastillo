@@ -31,7 +31,8 @@ header {
         color: white;
         display: flex;
         align-items: center;
-        padding: 10px; }
+        padding: 10px;
+        text-decoration: none; }
         header nav .luces .logo h1 {
           font-size: 30px;
           width: 250px;
@@ -143,36 +144,17 @@ header {
 /*Historia*/
 .scHistoria {
   margin: 20px;
-  border: solid 5px orangered;
-  border-radius: 10px; }
+  display: flex;
+  justify-content: center;
+  align-items: center; }
   .scHistoria .divflex {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap-reverse;
     /*Despues divVideoImg ponerles display flex*/ }
     .scHistoria .divflex .divVideoImg {
       margin: 10px;
-      position: relative; }
-      .scHistoria .divflex .divVideoImg video {
-        border-radius: 10px; }
-        @media screen and (max-width: 1250px) {
-          .scHistoria .divflex .divVideoImg video {
-            position: relative;
-            padding: 20px;
-            border-radius: 30px; } }
-      .scHistoria .divflex .divVideoImg .videoAbs {
-        border-radius: 10px;
-        position: absolute;
-        top: 30%; }
-        @media screen and (max-width: 1250px) {
-          .scHistoria .divflex .divVideoImg .videoAbs {
-            position: relative;
-            padding: 20px;
-            border-radius: 30px; } }
+      display: flex; }
       .scHistoria .divflex .divVideoImg .imgTrabajoTeam {
-        margin-top: 10%;
-        border-radius: 10px; }
+        margin: auto;
+        width: 300px; }
         @media screen and (max-width: 1250px) {
           .scHistoria .divflex .divVideoImg .imgTrabajoTeam {
             margin-top: 20px; } }
@@ -182,9 +164,10 @@ header {
           justify-content: space-around;
           flex-wrap: wrap; } }
     .scHistoria .divflex .divComoComence {
-      margin: 0px 10% 0px 0px;
-      width: 500px;
+      margin: 0 10%;
       text-align: center; }
+      .scHistoria .divflex .divComoComence .subTitulo {
+        margin: 20px; }
       @media screen and (max-width: 1250px) {
         .scHistoria .divflex .divComoComence {
           margin: 40px 30px 0px 30px; } }
