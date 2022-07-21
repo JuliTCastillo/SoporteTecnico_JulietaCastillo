@@ -61,7 +61,6 @@ header {
       header nav .luces .listEnlace {
         grid-column: 3;
         list-style: none;
-        margin-right: 20px;
         padding: 0; }
         header nav .luces .listEnlace .enlace {
           display: inline-block;
@@ -163,13 +162,41 @@ header {
           justify-content: space-around;
           flex-wrap: wrap; } }
     .scHistoria .divflex .divComoComence {
-      margin: 0 10%;
+      position: relative;
+      margin: 0 20%;
       text-align: center; }
+      .scHistoria .divflex .divComoComence .historia {
+        margin: 20px;
+        padding: 5%;
+        border-radius: 10px;
+        background-color: #111010; }
       .scHistoria .divflex .divComoComence .subTitulo {
-        margin: 20px; }
+        display: grid;
+        position: relative;
+        align-items: center;
+        justify-items: center;
+        background-color: #000000; }
+        .scHistoria .divflex .divComoComence .subTitulo .hTamaño {
+          padding: 30px; }
+        .scHistoria .divflex .divComoComence .subTitulo::before {
+          content: '';
+          position: absolute;
+          width: calc(100% + 0%);
+          /*tamaño de luces der e izq*/
+          height: calc(100% + 10%);
+          /*tamaño de luces arriba y abajo*/
+          z-index: -1;
+          /*se coloca atras*/
+          background-image: linear-gradient(60deg, #ff0000, #ffd000, #00ff00, #00e1ff, #2f00ff, #ff00dd, #ff004c, #ff0000);
+          background-size: 300%;
+          animation: animate_bg 5s infinite;
+          /*Tiempo de la animacion*/ }
       @media screen and (max-width: 1250px) {
         .scHistoria .divflex .divComoComence {
-          margin: 40px 30px 0px 30px; } }
+          margin: 0px 10%; } }
+      @media screen and (max-width: 500px) {
+        .scHistoria .divflex .divComoComence {
+          margin: 0px 10px; } }
     @media screen and (max-width: 1250px) {
       .scHistoria .divflex {
         justify-content: center;
@@ -187,7 +214,7 @@ header {
     width: 80px;
     left: 10%;
     top: 20px; }
-    @media screen and (max-width: 800px) {
+    @media screen and (max-width: 890px) {
       .scContrata #icCarrito1 {
         top: 10%; } }
     @media screen and (max-width: 1200px) {
@@ -197,6 +224,9 @@ header {
     @media screen and (max-width: 500px) {
       .scContrata #icCarrito1 {
         left: -10px; } }
+    @media screen and (max-width: 400px) {
+      .scContrata #icCarrito1 {
+        top: 70px; } }
   .scContrata #icCarrito2 {
     position: absolute;
     width: 80px;
@@ -214,24 +244,28 @@ header {
     width: 80px;
     left: 10%;
     bottom: 5%; }
-    @media screen and (max-width: 800px) {
+    @media screen and (max-width: 890px) {
       .scContrata #icCarrito3 {
-        left: 0%;
-        bottom: 30px; } }
+        left: 50px;
+        bottom: 100px; } }
     @media screen and (max-width: 1200px) {
       .scContrata #icCarrito3 {
         left: 40px;
         width: 60px; } }
-    @media screen and (max-width: 1030px) {
+    @media screen and (max-width: 1070px) {
       .scContrata #icCarrito3 {
         left: 0px;
         width: 60px; } }
+    @media screen and (max-width: 400px) {
+      .scContrata #icCarrito3 {
+        left: -20px;
+        bottom: 100px; } }
   .scContrata #icCarrito4 {
     position: absolute;
     width: 80px;
     right: 10%;
     top: 20px; }
-    @media screen and (max-width: 800px) {
+    @media screen and (max-width: 890px) {
       .scContrata #icCarrito4 {
         right: 0%;
         top: 10%; } }
@@ -242,6 +276,9 @@ header {
     @media screen and (max-width: 500px) {
       .scContrata #icCarrito4 {
         right: 0px; } }
+    @media screen and (max-width: 400px) {
+      .scContrata #icCarrito4 {
+        top: 70px; } }
   .scContrata #icCarrito5 {
     position: absolute;
     width: 80px;
@@ -260,33 +297,124 @@ header {
     width: 80px;
     right: 10%;
     bottom: 5%; }
-    @media screen and (max-width: 1030px) {
-      .scContrata #icCarrito6 {
-        right: 0px;
-        width: 60px; } }
     @media screen and (max-width: 1200px) {
       .scContrata #icCarrito6 {
         right: 40px;
         width: 60px; } }
-    @media screen and (max-width: 800px) {
+    @media screen and (max-width: 1070px) {
+      .scContrata #icCarrito6 {
+        right: 0px; } }
+    @media screen and (max-width: 880px) {
       .scContrata #icCarrito6 {
         right: 0px;
-        bottom: 30px; } }
+        bottom: 100px; } }
+    @media screen and (max-width: 400px) {
+      .scContrata #icCarrito6 {
+        right: -20px;
+        bottom: 100px; } }
   .scContrata .divgrillas {
     display: grid;
-    grid-template-columns: 250px 250px 250px;
+    grid-template-columns: 270px 270px 270px;
     grid-gap: 10px;
     justify-content: center;
     align-items: center; }
     .scContrata .divgrillas .cardCompra {
-      background-color: #000000;
-      border-radius: 20px;
-      border: #141b7c 2px solid; }
-      .scContrata .divgrillas .cardCompra .imgCompra {
-        width: 100px; }
-      .scContrata .divgrillas .cardCompra .borde {
-        border-top: #141b7c 2px solid; }
-    @media screen and (max-width: 930px) {
+      margin: 10px 10px;
+      border-radius: 20px; }
+      .scContrata .divgrillas .cardCompra .divFoto {
+        display: grid;
+        position: relative;
+        align-items: center;
+        justify-items: center;
+        background-color: #000000;
+        margin-bottom: 3px;
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px; }
+        .scContrata .divgrillas .cardCompra .divFoto .imgCompra {
+          width: 100px; }
+        .scContrata .divgrillas .cardCompra .divFoto::before {
+          content: '';
+          position: absolute;
+          border-top-right-radius: 10px;
+          border-top-left-radius: 10px;
+          width: calc(100% + 3%);
+          /*tamaño de luces der e izq*/
+          height: calc(96% + 10%);
+          /*tamaño de luces arriba y abajo*/
+          z-index: -1;
+          /*se coloca atras*/
+          background-image: linear-gradient(60deg, #7700ff, #3700ff, #001aff, #0066ff, #00a2ff, #00eeff, #00ff95, #00ff55);
+          background-size: 300%;
+          animation: animate_bg 5s infinite;
+          /*Tiempo de la animacion*/ }
+      .scContrata .divgrillas .cardCompra .lucesBloc {
+        display: grid;
+        position: relative;
+        align-items: center;
+        justify-items: center;
+        background-color: #000000;
+        margin-bottom: 3px; }
+        .scContrata .divgrillas .cardCompra .lucesBloc::before {
+          content: '';
+          position: absolute;
+          width: calc(100% + 3%);
+          /*tamaño de luces der e izq*/
+          height: calc(94% + 10%);
+          /*tamaño de luces arriba y abajo*/
+          z-index: -1;
+          /*se coloca atras*/
+          background-image: linear-gradient(60deg, #7700ff, #3700ff, #001aff, #0066ff, #00a2ff, #00eeff, #00ff95, #00ff55);
+          background-size: 300%;
+          animation: animate_bg 5s infinite;
+          /*Tiempo de la animacion*/ }
+      .scContrata .divgrillas .cardCompra .divPrecio {
+        display: grid;
+        position: relative;
+        align-items: center;
+        justify-items: center;
+        background-color: #000000;
+        margin-bottom: 3px; }
+        .scContrata .divgrillas .cardCompra .divPrecio .textoCentrado {
+          margin: 10px;
+          text-align: center; }
+        .scContrata .divgrillas .cardCompra .divPrecio::before {
+          content: '';
+          position: absolute;
+          width: calc(100% + 3%);
+          /*tamaño de luces der e izq*/
+          height: calc(94% + 10%);
+          /*tamaño de luces arriba y abajo*/
+          z-index: -1;
+          /*se coloca atras*/
+          background-image: linear-gradient(60deg, #7700ff, #3700ff, #001aff, #0066ff, #00a2ff, #00eeff, #00ff95, #00ff55);
+          background-size: 300%;
+          animation: animate_bg 5s infinite;
+          /*Tiempo de la animacion*/ }
+      .scContrata .divgrillas .cardCompra .divComprar {
+        display: grid;
+        position: relative;
+        align-items: center;
+        justify-items: center;
+        background-color: #000000;
+        margin-bottom: 3px;
+        border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 10px; }
+        .scContrata .divgrillas .cardCompra .divComprar::before {
+          content: '';
+          position: absolute;
+          border-bottom-right-radius: 10px;
+          border-bottom-left-radius: 10px;
+          width: calc(100% + 3%);
+          /*tamaño de luces der e izq*/
+          height: calc(96% + 15%);
+          /*tamaño de luces arriba y abajo*/
+          z-index: -1;
+          /*se coloca atras*/
+          background-image: linear-gradient(60deg, #7700ff, #3700ff, #001aff, #0066ff, #00a2ff, #00eeff, #00ff95, #00ff55);
+          background-size: 300%;
+          animation: animate_bg 5s infinite;
+          /*Tiempo de la animacion*/ }
+    @media screen and (max-width: 990px) {
       .scContrata .divgrillas {
         grid-template-columns: 250px;
         justify-content: center;
@@ -308,7 +436,8 @@ header {
         width: 300px; } }
 
 .scFormulario {
-  margin-top: 20px;
+  margin-top: 35px;
+  margin-bottom: 35px;
   display: flex;
   justify-content: center;
   align-items: center; }
@@ -317,19 +446,19 @@ header {
     .scFormulario form .tituloCentrado {
       text-align: center; }
     .scFormulario form .spanColor {
-      background-color: #5f5d5b;
-      border: #383838 1px solid;
-      color: black; }
+      background-color: #363636;
+      border: #222222 1px solid;
+      color: white; }
     .scFormulario form .inpColor {
-      background-color: #f1e9bd;
-      border: #42413f 1px solid;
-      color: #1a1a1a; }
+      background-color: #363636;
+      border: #222222 1px solid;
+      color: white; }
     .scFormulario form #btnEnviar {
-      background-color: #6d6d68;
-      border: #302f2c 1px solid;
-      color: black; }
+      background-color: #363636;
+      border: #222222 1px solid;
+      color: white; }
       .scFormulario form #btnEnviar:hover {
-        background-color: #aaaaa4; }
+        background-color: #464646; }
     @media screen and (max-width: 900px) {
       .scFormulario form {
         width: 80%; } }
@@ -341,6 +470,7 @@ footer {
   grid-area: footer;
   background-color: #111111;
   padding: 20px;
+  padding-bottom: 0;
   text-align: center;
   margin-top: 20px; }
   footer .divRedesSociales {
@@ -349,9 +479,11 @@ footer {
     footer .divRedesSociales .divIconoRS {
       display: flex;
       justify-content: space-between; }
-      footer .divRedesSociales .divIconoRS .iconoRS {
-        margin: 20px;
-        width: 30px; }
+      footer .divRedesSociales .divIconoRS figure {
+        margin: 0; }
+        footer .divRedesSociales .divIconoRS figure .iconoRS {
+          margin: 15px;
+          width: 30px; }
       @media screen and (max-width: 500px) {
         footer .divRedesSociales .divIconoRS {
           justify-content: center;
@@ -385,6 +517,9 @@ footer {
         height: 500px;
         margin-top: 7px;
         filter: brightness(0.4); }
+        @media screen and (max-width: 450px) {
+          #grilla main .portada .imgPortada {
+            height: 260px; } }
       #grilla main .portada .textAbsolute {
         position: absolute;
         bottom: 20px;
@@ -420,7 +555,7 @@ footer {
           animation: animate_bg 15s infinite;
           /*Tiempo de animación*/ }
         #grilla main .divContenido .centrarContenido .divPresentacion {
-          padding: 60px;
+          padding: 60px 35px;
           position: relative; }
         #grilla main .divContenido .centrarContenido #icono1 {
           width: 80px;
@@ -532,7 +667,7 @@ footer {
             #grilla main .scOpiniones .divOpinionIcono #icMsj4 {
               top: 20%;
               right: 0%;
-              right: -3%; } }
+              right: -2%; } }
         #grilla main .scOpiniones .divOpinionIcono #tildeOP {
           padding-top: 30px; }
         #grilla main .scOpiniones .divOpinionIcono .divOpiniones {

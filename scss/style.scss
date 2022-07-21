@@ -31,6 +31,9 @@
                 height: 500px;
                 margin-top: 7px;
                 filter: brightness(0.4);
+                @media screen and (max-width: 450px) {
+                    height: 260px;
+                }
             }
             .textAbsolute{
                 position: absolute;
@@ -66,7 +69,7 @@
                     animation: animate_bg 15s infinite; /*Tiempo de animación*/
                 }
                 .divPresentacion{
-                    padding: 60px;
+                    padding: 60px 35px;
                     position: relative;
                 }
                 #icono1 {
@@ -198,7 +201,7 @@
                         top: 20%;
                         right: 0%;
                         @if(max-width: 500px){
-                            right: -3%;
+                            right: -2%;
                         }
                     }
                 }

@@ -2,6 +2,7 @@ footer{
     grid-area: footer;
     background-color: #111111;
     padding: 20px;
+    padding-bottom: 0;
     text-align: center;
     margin-top: 20px;
     .divRedesSociales{
@@ -10,10 +11,14 @@ footer{
         .divIconoRS{
             display: flex;
             justify-content: space-between;
-            .iconoRS{
-                margin: 20px;
-                width: 30px;
+            figure{
+                margin: 0;
+                .iconoRS{
+                    margin: 15px;
+                    width: 30px;
+                }
             }
+            
             @media screen and (max-width: 500px){
                 justify-content: center;
                 align-items: center;

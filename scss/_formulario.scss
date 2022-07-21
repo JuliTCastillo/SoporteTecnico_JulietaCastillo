@@ -1,5 +1,6 @@
 .scFormulario{
-    margin-top: 20px;
+    margin-top: 35px;
+    margin-bottom: 35px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -9,21 +10,21 @@
             text-align: center;
         }
         .spanColor{
-            background-color: #5f5d5b;
-            border: rgb(56, 56, 56) 1px solid;
-            color:black;
+            background-color: #363636;
+            border: #222222 1px solid;
+            color:rgb(255, 255, 255);
         }
         .inpColor{
-            background-color: rgb(241, 233, 189);
-            border: #42413f 1px solid;
-            color:rgb(26, 26, 26);
+            background-color: #363636;
+            border: #222222 1px solid;
+            color:rgb(255, 255, 255);
         }
         #btnEnviar{
-            background-color: #6d6d68;
-            border: rgb(48, 47, 44) 1px solid;
-            color:black;
+            background-color: #363636;
+            border: #222222 1px solid;
+            color:rgb(255, 255, 255);
             &:hover{
-                background-color: #aaaaa4;
+                background-color: #464646;
             }
         }
         @media screen and (max-width: 900px) {

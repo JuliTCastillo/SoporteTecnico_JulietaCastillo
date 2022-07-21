@@ -32,7 +32,7 @@
     @if $id == 1 {
         left: 10%;
         top:20px;
-        @media screen and (max-width: 800px) {
+        @media screen and (max-width: 890px) {
             top: 10%;
         }
         @media screen and (max-width: 1200px){
@@ -42,28 +42,35 @@
         @media screen and (max-width: 500px) {
             left:-10px;
         }
+        @media screen and (max-width: 400px) {
+            top: 70px;
+        }
 
     }
     @else if $id == 3{
         left: 10%;
         bottom: 5%;
-        @media screen and (max-width: 800px) {
-            left: 0%;
-            bottom:30px;
+        @media screen and (max-width: 890px) {
+            left: 50px;
+            bottom: 100px;
         }
         @media screen and (max-width: 1200px){
             left: 40px;
             width: 60px;
         }
-        @media screen and (max-width: 1030px){
+        @media screen and (max-width: 1070px){
             left: 0px;
             width: 60px;
+        }
+        @media screen and (max-width: 400px) {
+            left: -20px;
+            bottom: 100px;
         }
     }
     @else if $id == 4{
         right: 10%;
         top:20px;
-        @media screen and (max-width: 800px) {
+        @media screen and (max-width: 890px) {
             right: 0%;
             top:10%;
         }
@@ -74,21 +81,27 @@
         @media screen and (max-width: 500px){
             right: 0px;
         }
+        @media screen and (max-width: 400px) {
+            top: 70px;
+        }
     }
     @else if $id == 6{
         right: 10%;
         bottom: 5%;
-        @media screen and (max-width: 1030px){
-            right: 0px;
-            width: 60px;
-        }
         @media screen and (max-width: 1200px){
             right: 40px;
             width: 60px;
         }
-        @media screen and (max-width: 800px) {
+        @media screen and (max-width: 1070px){
             right: 0px;
-            bottom:30px;
+        }
+        @media screen and (max-width: 880px) {
+            right: 0px;
+            bottom: 100px;
+        }
+        @media screen and (max-width: 400px) {
+            right: -20px;
+            bottom: 100px;
         }
 
     }
@@ -112,23 +125,103 @@
     }
     .divgrillas{
         display: grid;
-        grid-template-columns: 250px 250px 250px;
+        grid-template-columns: 270px 270px 270px;
         grid-gap: 10px;
         justify-content: center;
         align-items: center;
         .cardCompra{
-            background-color: #000000;
+            margin: 10px 10px;
             border-radius: 20px;
-            border: #141b7c 2px solid;
-            .imgCompra{
-                width: 100px;
+            .divFoto{
+                display: grid;
+                position: relative;
+                align-items: center;
+                justify-items: center;
+                background-color: #000000;
+                margin-bottom: 3px;
+                border-top-right-radius: 10px;
+                border-top-left-radius: 10px;
+                .imgCompra{
+                    width: 100px;
+                }
+                &::before{
+                    content: '';
+                    position: absolute;
+                    border-top-right-radius: 10px;
+                    border-top-left-radius: 10px;
+                    width: calc(100% + 3%); /*tamaño de luces der e izq*/
+                    height: calc(96% + 10%); /*tamaño de luces arriba y abajo*/
+                    z-index: -1; /*se coloca atras*/
+                    background-image: linear-gradient(60deg, #7700ff, #3700ff, #001aff, #0066ff, #00a2ff, #00eeff, #00ff95, #00ff55);
+                    background-size: 300%;
+                    animation: animate_bg 5s infinite; /*Tiempo de la animacion*/
+                }
             }
-            .borde{
-                border-top: #141b7c 2px solid;
-                
+            
+            .lucesBloc{
+                display: grid;
+                position: relative;
+                align-items: center;
+                justify-items: center;
+                background-color: #000000;
+                margin-bottom: 3px;
+                &::before{
+                    content: '';
+                    position: absolute;
+                    width: calc(100% + 3%); /*tamaño de luces der e izq*/
+                    height: calc(94% + 10%); /*tamaño de luces arriba y abajo*/
+                    z-index: -1; /*se coloca atras*/
+                    background-image: linear-gradient(60deg, #7700ff, #3700ff, #001aff, #0066ff, #00a2ff, #00eeff, #00ff95, #00ff55);
+                    background-size: 300%;
+                    animation: animate_bg 5s infinite; /*Tiempo de la animacion*/
+                }
+            }
+            .divPrecio{
+                display: grid;
+                position: relative;
+                align-items: center;
+                justify-items: center;
+                background-color: #000000;
+                margin-bottom: 3px;
+                .textoCentrado{
+                    margin: 10px;
+                    text-align: center;
+                }
+                &::before{
+                    content: '';
+                    position: absolute;
+                    width: calc(100% + 3%); /*tamaño de luces der e izq*/
+                    height: calc(94% + 10%); /*tamaño de luces arriba y abajo*/
+                    z-index: -1; /*se coloca atras*/
+                    background-image: linear-gradient(60deg, #7700ff, #3700ff, #001aff, #0066ff, #00a2ff, #00eeff, #00ff95, #00ff55);
+                    background-size: 300%;
+                    animation: animate_bg 5s infinite; /*Tiempo de la animacion*/
+                }
+            }
+            .divComprar{
+                display: grid;
+                position: relative;
+                align-items: center;
+                justify-items: center;
+                background-color: #000000;
+                margin-bottom: 3px;
+                border-bottom-right-radius: 10px;
+                border-bottom-left-radius: 10px;
+                &::before{
+                    content: '';
+                    position: absolute;
+                    border-bottom-right-radius: 10px;
+                    border-bottom-left-radius: 10px;
+                    width: calc(100% + 3%); /*tamaño de luces der e izq*/
+                    height: calc(96% + 15%); /*tamaño de luces arriba y abajo*/
+                    z-index: -1; /*se coloca atras*/
+                    background-image: linear-gradient(60deg, #7700ff, #3700ff, #001aff, #0066ff, #00a2ff, #00eeff, #00ff95, #00ff55);
+                    background-size: 300%;
+                    animation: animate_bg 5s infinite; /*Tiempo de la animacion*/
+                }
             }
         }
-        @media screen and (max-width: 930px){
+        @media screen and (max-width: 990px){
             grid-template-columns: 250px;
             justify-content: center;
             align-items: center;
